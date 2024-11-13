@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1594a4;
+  --primary-light: #30a0ac;
+  --secondary: #a2d4d8;
+  --accent: #94cccc;
+  --accent-light: #b7dcdc;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8fafc];
+  }
+
+  input, textarea, select {
+    @apply bg-white border border-[#a2d4d8] rounded-lg px-4 py-2.5 
+    focus:outline-none focus:ring-2 focus:ring-[#1594a4] focus:border-[#1594a4] 
+    placeholder:text-gray-400 shadow-sm transition-all duration-200
+    hover:border-[#30a0ac];
+  }
+
+  label {
+    @apply text-[#1594a4] font-medium mb-1.5 block;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center px-4 py-2.5 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white 
+    bg-[#1594a4] hover:bg-[#30a0ac] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1594a4] disabled:opacity-50 
+    transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-4 py-2.5 border border-[#94cccc] rounded-lg shadow-sm text-sm font-medium text-[#1594a4] 
+    bg-white hover:bg-[#b7dcdc] hover:border-[#1594a4] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#94cccc] 
+    disabled:opacity-50 transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 border border-[#b7dcdc]/20;
+  }
+
+  .input-group {
+    @apply space-y-2 bg-[#f8fafc] p-4 rounded-lg border border-[#a2d4d8]/30;
+  }
+
+  .form-control {
+    @apply flex flex-col space-y-1;
+  }
+
+  .input-primary {
+    @apply block w-full rounded-lg border-[#a2d4d8] bg-white px-4 py-2.5
+    focus:border-[#1594a4] focus:ring-[#1594a4] shadow-sm
+    hover:border-[#30a0ac] transition-colors duration-200;
+  }
+
+  .progress-bar {
+    @apply bg-[#1594a4] h-2.5 rounded-full transition-all duration-300;
+  }
+
+  .progress-bar-bg {
+    @apply bg-[#b7dcdc] rounded-full h-2.5;
+  }
+
+  .nav-link {
+    @apply text-[#1594a4] hover:text-[#30a0ac] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+  }
+
+  .badge-success {
+    @apply bg-[#94cccc]/20 text-[#1594a4] px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-pending {
+    @apply bg-[#b7dcdc]/20 text-[#30a0ac] px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-[#1594a4] mb-4;
+  }
+
+  .form-section {
+    @apply bg-white p-6 rounded-xl shadow-sm border border-[#a2d4d8]/30 space-y-4;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-[#1594a4] mb-1;
+  }
+
+  .textarea-primary {
+    @apply block w-full rounded-lg border-[#a2d4d8] bg-white px-4 py-3
+    focus:border-[#1594a4] focus:ring-[#1594a4] shadow-sm
+    hover:border-[#30a0ac] transition-colors duration-200 min-h-[120px]
+    resize-y;
+  }
+
+  .select-primary {
+    @apply block w-full rounded-lg border-[#a2d4d8] bg-white px-4 py-2.5
+    focus:border-[#1594a4] focus:ring-[#1594a4] shadow-sm
+    hover:border-[#30a0ac] transition-colors duration-200;
+  }
+
+  .question-card {
+    @apply bg-[#f8fafc] p-6 rounded-xl border border-[#a2d4d8]/30 
+    hover:border-[#1594a4]/30 transition-all duration-200 space-y-4;
+  }
+
+  .response-card {
+    @apply bg-white p-6 rounded-xl shadow-sm border border-[#a2d4d8]/30 
+    hover:border-[#1594a4]/30 transition-all duration-200;
+  }
+}

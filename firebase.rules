@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read/write access to all documents for now
+    // In production, you should restrict this appropriately
+    match /{document=**} {
+      allow read, write: if true;
+    }
+    
+    // Patients collection
+    match /patients/{patientId} {
+      allow read, write: if true;
+    }
+    
+    // Questionnaires collection
+    match /questionnaires/{questionnaireId} {
+      allow read, write: if true;
+    }
+    
+    // Responses collection
+    match /responses/{responseId} {
+      allow read, write: if true;
+    }
+  }
+}
